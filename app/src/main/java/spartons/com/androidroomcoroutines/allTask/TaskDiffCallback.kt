@@ -1,4 +1,4 @@
-package spartons.com.androidroomcoroutines
+package spartons.com.androidroomcoroutines.allTask
 
 import androidx.recyclerview.widget.DiffUtil
 import spartons.com.androidroomcoroutines.roomPersistence.Task

@@ -1,4 +1,4 @@
-package spartons.com.androidroomcoroutines
+package spartons.com.androidroomcoroutines.allTask
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,11 +8,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
+import spartons.com.androidroomcoroutines.Injection
+import spartons.com.androidroomcoroutines.R
 import spartons.com.androidroomcoroutines.newTask.CreateNewTaskActivity
+import spartons.com.androidroomcoroutines.nonNull
+import spartons.com.androidroomcoroutines.observe
 import spartons.com.androidroomcoroutines.roomPersistence.Task
-import spartons.com.androidroomcoroutines.ui.AllTaskViewModel
 
-class AllTaskActivity : AppCompatActivity(), AllTaskRecyclerViewAdapter.IDeleteTaskListener {
+class AllTaskActivity : AppCompatActivity(),
+    AllTaskRecyclerViewAdapter.IDeleteTaskListener {
 
     private lateinit var viewModel: AllTaskViewModel
 

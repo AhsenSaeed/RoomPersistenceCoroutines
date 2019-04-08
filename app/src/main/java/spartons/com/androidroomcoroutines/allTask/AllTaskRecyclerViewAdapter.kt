@@ -1,4 +1,4 @@
-package spartons.com.androidroomcoroutines
+package spartons.com.androidroomcoroutines.allTask
 
 import android.content.Context
 import android.text.SpannableStringBuilder
@@ -11,6 +11,7 @@ import androidx.core.text.bold
 import androidx.core.text.color
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import spartons.com.androidroomcoroutines.R
 import spartons.com.androidroomcoroutines.roomPersistence.Task
 
 
@@ -30,7 +31,13 @@ class AllTaskRecyclerViewAdapter(private val tasks: ArrayList<Task>, private val
     else throw IllegalArgumentException("Calling class does not implement ISingleBuzzReportClickListener")
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        return MyViewHolder(layoutInflater.inflate(R.layout.task_list_layout, parent, false))
+        return MyViewHolder(
+            layoutInflater.inflate(
+                R.layout.task_list_layout,
+                parent,
+                false
+            )
+        )
     }
 
     override fun getItemCount() = tasks.size
@@ -50,7 +57,12 @@ class AllTaskRecyclerViewAdapter(private val tasks: ArrayList<Task>, private val
     }
 
     fun updateTasks(tasks: List<Task>) {
-        val diffResult = DiffUtil.calculateDiff(TaskDiffCallback(this.tasks, tasks))
+        val diffResult = DiffUtil.calculateDiff(
+            TaskDiffCallback(
+                this.tasks,
+                tasks
+            )
+        )
         this.tasks.clear()
         this.tasks.addAll(tasks)
         diffResult.dispatchUpdatesTo(this)

@@ -8,8 +8,8 @@ import androidx.lifecycle.ViewModelProviders
 import kotlinx.android.synthetic.main.activity_new_task.*
 import spartons.com.androidroomcoroutines.Injection
 import spartons.com.androidroomcoroutines.R
+import spartons.com.androidroomcoroutines.ViewModelFactory
 import spartons.com.androidroomcoroutines.roomPersistence.Task
-import spartons.com.androidroomcoroutines.ui.ViewModelFactory
 
 /**
  * Ahsen Saeed

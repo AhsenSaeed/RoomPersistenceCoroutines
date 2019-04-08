@@ -1,7 +1,8 @@
-package spartons.com.androidroomcoroutines.ui
+package spartons.com.androidroomcoroutines
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import spartons.com.androidroomcoroutines.allTask.AllTaskViewModel
 import spartons.com.androidroomcoroutines.newTask.CreateNewTaskViewModel
 import spartons.com.androidroomcoroutines.roomPersistence.TaskDao
 

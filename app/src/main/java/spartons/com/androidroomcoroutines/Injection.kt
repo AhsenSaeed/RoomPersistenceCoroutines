@@ -3,7 +3,6 @@ package spartons.com.androidroomcoroutines
 import android.content.Context
 import spartons.com.androidroomcoroutines.roomPersistence.TaskDao
 import spartons.com.androidroomcoroutines.roomPersistence.TaskDatabase
-import spartons.com.androidroomcoroutines.ui.ViewModelFactory
 
 
 /**
