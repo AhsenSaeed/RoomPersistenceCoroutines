@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".AllTaskActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:theme="@style/ToolbarColoredBackArrow"
+                android:background="@color/colorDarkAccent"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_gravity="start"
+                      android:drawablePadding="15dp"
+                      android:textColor="@color/colorWhite"
+                      android:textStyle="bold"
+                      android:text="@string/all_tasks"
+                      android:textSize="17sp"
+                      android:gravity="center_vertical"
+                      android:layout_height="match_parent"
+            />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/allTaskRecyclerView"
+            android:layout_marginTop="?android:attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    <ImageView android:layout_width="match_parent"
+               android:contentDescription="@null"
+               android:visibility="gone"
+               android:id="@+id/noTaskImageView"
+               android:src="@drawable/no_task_background"
+               android:scaleType="centerCrop"
+               android:layout_height="match_parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/createTaskButton"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/add_icon"
+            android:layout_margin="30dp"
+            android:layout_height="wrap_content"/>
+
+</RelativeLayout>

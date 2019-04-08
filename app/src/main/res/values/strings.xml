@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AndroidRoomCoroutines</string>
+    <string name="add_new_task">Add New Task</string>
+    <string name="enter_task_name">Enter task name</string>
+    <string name="new_task">New Task</string>
+    <string name="enter_task_description">Enter task description</string>
+    <string name="empty">""</string>
+    <string name="all_tasks">All Tasks</string>
+</resources>

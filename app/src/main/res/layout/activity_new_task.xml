@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryBackground"
+        tools:context=".newTask.CreateNewTaskActivity"
+        android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/newTaskActivityAppBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/newTaskActivityToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:theme="@style/ToolbarColoredBackArrow"
+                android:background="@color/colorDarkAccent"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_gravity="center"
+                      android:drawableStart="@drawable/create_new_task_icon"
+                      android:drawablePadding="15dp"
+                      android:textColor="@color/colorWhite"
+                      android:textStyle="bold"
+                      android:text="@string/new_task"
+                      android:textSize="17sp"
+                      android:gravity="center_vertical"
+                      android:layout_height="match_parent"
+                      android:drawableLeft="@drawable/create_new_task_icon"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:id="@+id/tempLayout"
+                  android:layout_marginStart="20dp"
+                  android:layout_below="@+id/newTaskActivityAppBarLayout"
+                  android:layout_marginTop="25dp"
+                  android:layout_marginEnd="20dp"
+                  android:orientation="vertical"
+                  android:layout_height="wrap_content">
+
+        <EditText android:layout_width="match_parent"
+                  android:hint="@string/enter_task_name"
+                  android:background="@drawable/edit_text_style"
+                  android:padding="10dp"
+                  android:textSize="15sp"
+                  android:id="@+id/addNewTaskTitleTextView"
+                  android:textColorHint="@color/colorSecondaryText"
+                  android:textColor="@color/colorPrimaryText"
+                  android:inputType="text"
+                  android:autofillHints="no"
+                  android:layout_height="wrap_content"
+                  tools:ignore="UnusedAttribute"/>
+
+        <EditText android:layout_width="match_parent"
+                  android:layout_marginTop="10dp"
+                  android:background="@drawable/edit_text_style"
+                  android:hint="@string/enter_task_description"
+                  android:id="@+id/addNewTaskDescriptionTextView"
+                  android:inputType="textMultiLine"
+                  android:scrollbars="vertical"
+                  android:textColor="@color/colorPrimaryText"
+                  android:textColorHint="@color/colorSecondaryText"
+                  android:gravity="top|start"
+                  android:padding="5dp"
+                  android:textSize="14sp"
+                  android:autofillHints="no"
+                  tools:ignore="UnusedAttribute"
+                  android:layout_height="90dp"/>
+
+    </LinearLayout>
+
+    <Button android:layout_width="wrap_content"
+            android:background="@drawable/accent_curved_button_drawable"
+            android:text="@string/add_new_task"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="25dp"
+            android:id="@+id/addNewTaskButton"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textStyle="bold"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/tempLayout"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="15sp"
+            android:layout_height="45dp"/>
+
+</RelativeLayout>
